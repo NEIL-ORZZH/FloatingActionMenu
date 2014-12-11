@@ -1,6 +1,6 @@
 # FloatingActionMenu
 
-iOS FloatingActionMenu line inbox from google.
+iOS FloatingActionMenu like inbox from google.
 
 ![capture](Capture/capture.png)
 
