@@ -2,7 +2,7 @@
 
 iOS FloatingActionMenu line inbox from google.
 
-![capture](Capture/image01.png)
+![capture](Capture/capture.png)
 
 ####Usage
 
