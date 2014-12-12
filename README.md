@@ -28,3 +28,7 @@ FloatingActionMenu* actionMenu = [FloatingActionMenu createMenu:self
                                                           color:[UIColor colorWithRed:0.86 green:0.27 blue:0.22 alpha:1]
                                                   expandedItems:items];
 ```
+####Todo
+
+- Attach to a scroll view
+- Relayout for orientation change
