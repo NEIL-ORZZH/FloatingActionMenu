@@ -21,12 +21,12 @@ NSArray* items = @[ @{ FloatingActionMenuImage : [UIImage imageNamed:@"Item01"],
                     @{ FloatingActionMenuImage : [UIImage imageNamed:@"Item04"],
                        FloatingActionMenuText : @"Menu item 04",
                        FloatingActionMenuColor : [UIColor colorWithRed:0 green:0.73 blue:0.82 alpha:1] } ];
-FloatingActionMenu* actionMenu = [FloatingActionMenu createMenu:self
-                                                          image:[UIImage imageNamed:@"Main"]
-                                                  expandedImage:[UIImage imageNamed:@"MainExpanded"]
-                                                      titleText:@"Main item"
-                                                          color:[UIColor colorWithRed:0.86 green:0.27 blue:0.22 alpha:1]
-                                                  expandedItems:items];
+FloatingActionMenu* actionMenu = [FloatingActionMenu createMenuInViewController:self
+                                                                          image:[UIImage imageNamed:@"Main"]
+                                                                  expandedImage:[UIImage imageNamed:@"MainExpanded"]
+                                                                      titleText:@"Main item"
+                                                                          color:[UIColor colorWithRed:0.86 green:0.27 blue:0.22 alpha:1]
+                                                                  expandedItems:items];
 ```
 ####Todo
 

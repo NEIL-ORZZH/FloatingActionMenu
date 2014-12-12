@@ -40,12 +40,12 @@
 
 @implementation FloatingActionMenu
 
-+ (FloatingActionMenu*)createMenu:(UIViewController*)viewController
-                            image:(UIImage*)image
-                    expandedImage:(UIImage*)expandedImage
-                        titleText:(NSString*)titleText
-                            color:(UIColor*)color
-                    expandedItems:(NSArray*)expandedItems;
++ (FloatingActionMenu*)createMenuInViewController:(UIViewController*)viewController
+                                            image:(UIImage*)image
+                                    expandedImage:(UIImage*)expandedImage
+                                        titleText:(NSString*)titleText
+                                            color:(UIColor*)color
+                                    expandedItems:(NSArray*)expandedItems
 {
     return [[self alloc] initWithViewController:viewController
                                           image:image
@@ -53,6 +53,17 @@
                                       titleText:titleText
                                           color:color
                                   expandedItems:expandedItems];
+}
+
++ (FloatingActionMenu*)createMenuInScrollView:(UIScrollView*)scrollView
+                                        image:(UIImage*)image
+                                expandedImage:(UIImage*)expandedImage
+                                    titleText:(NSString*)titleText
+                                        color:(UIColor*)color
+                                expandedItems:(NSArray*)expandedItems
+{
+#pragma mark - TODO
+    return nil;
 }
 
 - (id)initWithViewController:(UIViewController*)viewController
@@ -591,7 +602,10 @@ static CGFloat SubmenuButtonSize = 40.f;
         self.backgroundColor = self.highlightedColor;
     }
     else {
-        self.backgroundColor = self.color;
+        [UIView animateWithDuration:0.3
+                         animations:^{
+            self.backgroundColor = self.color;
+                         }];
     }
 }
 

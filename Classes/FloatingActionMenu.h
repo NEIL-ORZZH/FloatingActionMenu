@@ -13,7 +13,7 @@
 #define FloatingActionMenuText @"MenuText"
 #define FloatingActionMenuColor @"MenuColor"
 
-typedef enum{
+typedef enum {
     ExpandedState,
     FoldingState
 } MainItemState;
@@ -32,20 +32,26 @@ typedef enum{
 
 @required
 - (void)didPressMainItem;
-- (void)didPressSubmenuItem:(MenuItem *)item;
+- (void)didPressSubmenuItem:(MenuItem*)item;
 
 @end
 
 @interface FloatingActionMenu : UIView <MenuItemDelegate>
 
 @property (nonatomic, weak) id<FloatingActionMenuDelegate> delegate;
-+ (FloatingActionMenu*)createMenu:(UIViewController*)viewController
-                            image:(UIImage*)image
-                    expandedImage:(UIImage*)expandedImage
-                        titleText:(NSString*)titleText
-                            color:(UIColor*)color
-                    expandedItems:(NSArray*)expandedItems;
-- (void)setMenuItems:(NSArray *)items;
++ (FloatingActionMenu*)createMenuInViewController:(UIViewController*)viewController
+                                            image:(UIImage*)image
+                                    expandedImage:(UIImage*)expandedImage
+                                        titleText:(NSString*)titleText
+                                            color:(UIColor*)color
+                                    expandedItems:(NSArray*)expandedItems;
++ (FloatingActionMenu*)createMenuInScrollView:(UIScrollView*)scrollView
+                                        image:(UIImage*)image
+                                expandedImage:(UIImage*)expandedImage
+                                    titleText:(NSString*)titleText
+                                        color:(UIColor*)color
+                                expandedItems:(NSArray*)expandedItems;
+- (void)setMenuItems:(NSArray*)items;
 - (void)setMargin:(CGFloat)marginRight marginBottom:(CGFloat)marginBottom;
 
 @end
@@ -71,14 +77,14 @@ typedef enum{
 
 @interface LabelButton : UIButton
 
-@property (nonatomic, strong) UIColor *color;
-@property (nonatomic, strong) UIColor *highlightedColor;
+@property (nonatomic, strong) UIColor* color;
+@property (nonatomic, strong) UIColor* highlightedColor;
 
 @end
 
 @interface ActionButton : BFPaperButton
 
-@property (nonatomic, strong) UIColor *color;
-@property (nonatomic, strong) UIColor *highlightedColor;
+@property (nonatomic, strong) UIColor* color;
+@property (nonatomic, strong) UIColor* highlightedColor;
 
 @end
