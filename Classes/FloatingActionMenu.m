@@ -34,7 +34,7 @@
 @property (nonatomic, assign) CGFloat marginBottom;
 
 @property (nonatomic, strong) MenuItem* mainItem;
-@property (nonatomic, copy) NSMutableArray* itemContainer;
+@property (nonatomic, strong) NSMutableArray* itemContainer;
 
 @end
 
